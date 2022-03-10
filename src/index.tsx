@@ -1,5 +1,11 @@
 import React, { FC, HTMLAttributes, ReactChild } from 'react';
 
+export function Component ():JSX.Element {
+  return <div>Component</div>;
+}
+export * from './components';
+export * from './types';
+
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
   children?: ReactChild;
@@ -13,3 +19,4 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 export const Thing: FC<Props> = ({ children }) => {
   return <div>{children || `the snozzberries taste like snozzberries`}</div>;
 };
+
